@@ -11,9 +11,6 @@ namespace Sound
         */
         public enum BGM {
             BGM00CH0,
-            BGM00CH1,
-            BGM00CH2,
-            BGM00CH3,
         }
 
         public enum JINGLE {
@@ -25,9 +22,6 @@ namespace Sound
 
         public enum SE {
             KKT_UP,
-            KKT_DOWN,
-            BUTTON_SELECT,
-            BUTTON_BACK,
         }
 
         public enum VOICE {
