@@ -39,6 +39,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 2858727725
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: donka
+    uniqueID: 2719267177
     locked: 0
