@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour {
   [SerializeField] Text ComboText;
   [SerializeField] Text TitleText;
 
+  [SerializeField] Button DonArea;
+  [SerializeField] Button KaArea1;
+  [SerializeField] Button KaArea2;
+  [SerializeField] Button KaArea3;
+  [SerializeField] Button KaArea4;
 
   [SerializeField] GameObject Don;
   [SerializeField] GameObject Ka;
@@ -83,6 +88,23 @@ public class GameManager : MonoBehaviour {
       .AsObservable()
       .Subscribe(_ => loadChart());
 
+    DonArea.onClick
+      .AsObservable()
+      .Subscribe(_ => setDonFlag());
+
+    KaArea1.onClick
+      .AsObservable()
+      .Subscribe(_ => setKaFlag());
+    KaArea2.onClick
+      .AsObservable()
+      .Subscribe(_ => setKaFlag());
+    KaArea3.onClick
+      .AsObservable()
+      .Subscribe(_ => setKaFlag());
+    KaArea4.onClick
+      .AsObservable()
+      .Subscribe(_ => setKaFlag());
+
     this.UpdateAsObservable()
       .Where(_ => isPlaying)
       .Where(_ => Notes.Count > GoIndex)
@@ -107,22 +129,20 @@ public class GameManager : MonoBehaviour {
         updateScore("failure");
         CheckTimingIndex++;
       });
+  }
 
-    this.UpdateAsObservable()
-      .Where(_ => isPlaying)
-      .Where(_ => Input.GetKeyDown(KeyCode.D))
-      .Subscribe(_ => {
-        beat("don", Time.time * 1000 - PlayTime);
-        SoundEffectSubject.OnNext("don");
-      });
+  void setDonFlag() {
+    if (isPlaying) {
+      beat("don", Time.time * 1000 - PlayTime);
+      SoundEffectSubject.OnNext("don");
+    }
+  }
 
-    this.UpdateAsObservable()
-      .Where(_ => isPlaying)
-      .Where(_ => Input.GetKeyDown(KeyCode.K))
-      .Subscribe(_ => {
-        beat("ka", Time.time * 1000 - PlayTime);
-        SoundEffectSubject.OnNext("ka");
-      });
+  void setKaFlag() {
+    if (isPlaying) {
+      beat("ka", Time.time * 1000 - PlayTime);
+      SoundEffectSubject.OnNext("ka");
+    }
   }
 
   void loadChart() {
