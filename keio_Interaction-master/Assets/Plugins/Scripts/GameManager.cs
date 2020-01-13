@@ -178,7 +178,7 @@ public class GameManager : MonoBehaviour {
   void play() {
     Music.Stop();
     Music.Play();
-    PlayTime = Time.time * 1000;
+    PlayTime = Time.time * 1000 + 580; // ここで楽曲開始時間調整
     isPlaying = true;
     Debug.Log("Game Start!");
   }

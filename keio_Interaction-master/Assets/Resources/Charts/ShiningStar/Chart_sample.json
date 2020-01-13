@@ -11,6 +11,14 @@
       {"timing": "7000", "type": "don"},
       {"timing": "7250", "type": "don"},
       {"timing": "7500", "type": "don"},
-      {"timing": "7750", "type": "ka"}
+      {"timing": "7750", "type": "ka"},
+      {"timing": "8000", "type": "don"},
+      {"timing": "8030", "type": "ka"},
+      {"timing": "9000", "type": "ka"},
+      {"timing": "10000", "type": "don"},
+      {"timing": "11000", "type": "don"},
+      {"timing": "11300", "type": "don"},
+      {"timing": "11400", "type": "don"},
+      {"timing": "12000", "type": "ka"}
     ]
   }
