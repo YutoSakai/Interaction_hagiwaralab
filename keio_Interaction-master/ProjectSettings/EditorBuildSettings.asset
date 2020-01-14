@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tips/Acceleration/TestAcceleration.unity
     guid: 6e8f985dd190a4808bee6a3b415cf97f
-  - enabled: 1
+  - enabled: 0
     path: Assets/TestRotateWithCompass.unity
     guid: a9f747e72ddea4cdebb39e010b41a785
   m_configObjects: {}
